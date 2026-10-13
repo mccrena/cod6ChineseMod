@@ -1,12 +1,12 @@
 # 更新日志 (Changelog)
 
-## [v1.0-Final] - 2026-10-13
+## [v1.0-Beta] - 2026-10-13
 
-### 全流程里程碑达成 (Full Campaign Milestone)
-- **19 关全流程中文配音制作完毕**：全战役共 2031 条独立战术语音全部完成 IndexTTS 2.5 神经声学音色克隆与时长对齐。
-- **COD 引擎规范 100% 验收合规**：全部 2031 个音频文件均满足 `1024 Blocksize`、`48000Hz Mono`、`APPLICATION (fsiz)` 精确裸流校验块与 `SEEKTABLE` 寻道表结构，彻底解决流式解码器静音问题。
+### 全流程里程碑达成 (Full Campaign Beta Release)
+- **19 关全流程中文配音首发测试**：全战役共 2031 条独立战术语音全部完成 IndexTTS 2.5 神经声学音色克隆与时长对齐。
+- **COD 引擎规范 100% 验收合规**：全部 2031 个音频文件均满足 `1024 Blocksize`、`48000Hz Mono`、`APPLICATION (fsiz)` 精确裸流校验块与 `SEEKTABLE` 寻道表结构，解决流式解码器静音问题。
 - **Fastfile 双补丁编译完毕**：生成全战役 19 关 `sch_h2_mod_patch_<level>.ff` 及双门槛文件 `h2_mod_patch_<level>.ff`。
-- **发布级绿色打包与脚本**：加入全新编写的 `一键安装.bat`、`一键卸载.bat` 与 `校验工具.bat`，全面适配普通游戏与 Overlord VR 模式。
+- **绿色免侵入打包与脚本**：加入全新编写的 `一键安装.bat`、`一键卸载.bat` 与 `校验工具.bat`，全面通用适配普通原版与 Overlord VR 模式。
 
 ---
 

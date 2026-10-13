@@ -1,34 +1,44 @@
 # 《使命召唤：现代战争2 战役重制版》全流程中文普通话配音 Mod
 
 ![MW2CR Chinese Audio Mod](https://img.shields.io/badge/MW2CR-Chinese%20Audio%20Mod-red?style=for-the-badge&logo=activision)
-![Release](https://img.shields.io/badge/Release-v1.0--Final-brightgreen?style=for-the-badge)
+![Release](https://img.shields.io/badge/Release-v1.0--Beta-yellow?style=for-the-badge)
 ![Campaign](https://img.shields.io/badge/Campaign-19%20Levels%20(100%25)-blue?style=for-the-badge)
 ![Voices](https://img.shields.io/badge/Dialogues-2031%20Lines-orange?style=for-the-badge)
-![VR Compatible](https://img.shields.io/badge/Overlord%20VR-Compatible-purple?style=for-the-badge)
+![Compatibility](https://img.shields.io/badge/Mode-PC%20Vanilla%20%7C%20Overlord%20VR-green?style=for-the-badge)
 
-本 Mod 为 PC 版 **《使命召唤：现代战争2 战役重制版》（Call of Duty: Modern Warfare 2 Campaign Remastered / MW2CR）** 带来全流程高质量中文普通话配音。专为追求极致临场感的战役玩家与 **Overlord VR Mod** 虚拟现实玩家量身打造，彻底摆脱低头看字幕的疲惫，实现全身心投入现代战争宏大战场的沉浸体验！
+本 Mod 为 PC 版 **《使命召唤：现代战争2 战役重制版》（Call of Duty: Modern Warfare 2 Campaign Remastered / MW2CR）** 带来全流程中文普通话配音。
+
+本项目为**个人独立技术制作**，基于本地神经声学 AI（IndexTTS 2.5）管线完成全战役 19 关角色的音色克隆与时长校准。无论您是体验 **普通原版战役（无 VR Mod，常规显示器游玩）** 还是搭配 **Overlord VR Mod（虚拟现实头显沉浸游玩）**，均可实现告别频繁看字幕的疲惫，尽情沉浸于现代战争宏大的战术对白与剧情演出中！
+
+> ⚠️ **首发 Beta 测试版特别说明**：  
+> 本 Mod 目前为 **Beta 1.0 首发测试版**，全流程 2031 条语音均由个人独立生成、校对与打包。  
+> 受限于当前神经声学模型与个人测试精力的局限性，在某些激烈交火情境下，个别对白可能存在语气语调不自然、个别多音字发音差异、或与背景音效混音音量偶有不均等情况。  
+> 本 Mod 仅供学习交流与技术验证，欢迎大家体验，如遇到任何问题或对白异常，请随时在 [GitHub Issues](https://github.com/mccrena/cod6ChineseMod/issues) 提交反馈！
 
 ---
 
 ## 🌟 核心特色与制作亮点
 
-1. **全战役 19 关全流程重制（100% 覆盖）**：
-   - 涵盖从序幕《训练营》、白雪皑皑的《绝岭雄风》、高潮迭起的《别说俄语》与《大撤退》，到华盛顿保卫战《第二阳光》、《威士忌旅馆》，以及阿富汗最终决战《收尾工作》的**全战役 19 个关卡**。
-   - 全流程累计精细制作并校准 **2031 条战术对白与剧情演出语音**。
+1. **全战役 19 关全流程覆盖（100% 完整收录）**：
+   - 涵盖从序幕《训练营》、雪山《绝岭雄风》、高潮迭起的《别说俄语》与《大撤退》，到华盛顿保卫战《第二阳光》、《威士忌旅馆》，以及阿富汗最终决战《收尾工作》的**全战役 19 个关卡**。
+   - 全流程精细制作并校准 **2031 条战术对白与剧情演出语音**。
 
 2. **角色原声音色克隆（IndexTTS 2.5 神经声学引擎）**：
-   - 摒弃通用机械播音腔，基于动视官方原声母带提取切片作为声线参考（Reference Audio）。
-   - 深度克隆**普莱斯上尉（Captain Price）**、**肥皂（Soap MacTavish）**、**谢菲尔德将军（General Shepherd）**、**弗利中士（Sgt. Foley）**、**邓恩下士（Cpl. Dunn）**、**马卡洛夫（Makarov）** 等经典角色的音色质感与战术语气。
+   - 基于动视官方原声母带切片作为音色参考，尽力还原**普莱斯上尉（Captain Price）**、**肥皂（Soap MacTavish）**、**谢菲尔德将军（General Shepherd）**、**弗利中士（Sgt. Foley）**、**邓恩下士（Cpl. Dunn）**、**马卡洛夫（Makarov）** 等经典角色的战术硬汉语气。
 
-3. **严格时长与演出节奏对齐（零溢出规范）**：
-   - 战役脚本中的动作演出、无线电通信间隔高度依赖原声时长。本项目引入严密的时长校准流水线，确保中文配音**零溢出、无吞字、无重叠抢话**。
+3. **严格时长与演出节奏对齐（避免吞字抢话）**：
+   - 战役脚本中的剧情演出与无线电通信间隔高度依赖原声时长。本项目进行了全流程时长校准，最大程度贴合原版节奏，避免吞字与严重抢话。
 
-4. **100% 符合 COD 引擎专有流式 FLAC 规范**：
-   - 严格遵循现代战争底层音频解码器规范：`1024` 固定采样块长（Fixed Blocksize）、48000Hz 单声道、精准内嵌 `APPLICATION (fsiz)` 元数据块与寻道表（SEEKTABLE），彻底杜绝游戏内静音与爆音。
+4. **100% 匹配 COD 引擎底层流式 FLAC 规范**：
+   - 遵循现代战争底层解码规范：`1024` 固定分块、48000Hz 单声道、内嵌 `APPLICATION (fsiz)` 元数据块与精确寻道表（SEEKTABLE），有效防止引擎静音或卡顿。
 
 5. **双补丁机制与非侵入式绿色覆盖**：
-   - 纯绿色补丁架构，**不修改、不替换任何原生官方 .pak 数据文件**。
-   - 附带一键安装与一键卸载批处理脚本，秒装秒卸，安全无残留。
+   - 纯绿色补丁架构，**不改动任何官方原生 .pak 数据文件**。
+   - 附带一键安装与一键卸载批处理脚本，秒装秒卸，安全绿色。
+
+6. **全环境通用兼顾**：
+   - **普通原版 PC 游戏**：原生兼容，无需安装任何前置 VR 插件。
+   - **Overlord VR Mod**：原生兼容，全中文无线电与战术语音通过空间音频系统直达头显。
 
 ---
 
@@ -58,11 +68,15 @@
 
 ---
 
-## 📥 安装方法
+## 📥 下载与安装方法
 
-### 推荐方法：一键安装（30 秒完成）
-1. 下载 Release 中的 `MW2CR_Chinese_Audio_Mod_v1.0_Final.zip` 压缩包。
-2. 将压缩包解压，把里面的全部内容（包含 `h2-mod` 文件夹和 `一键安装.bat`）复制到您的 **MW2CR 游戏根目录**（即含有 `overlord.exe` 或 `MW2CR.exe` 的文件夹）。
+### 📦 下载地址
+请前往 GitHub Releases 页面下载最新发布的安装压缩包：  
+👉 **[GitHub Releases 下载链接](https://github.com/mccrena/cod6ChineseMod/releases)**
+
+### 推荐方法：一键安装（半分钟完成）
+1. 从 Releases 下载 `MW2CR_Chinese_Audio_Mod_Beta1.0.zip`。
+2. 解压该压缩包，将里面的所有内容（包含 `h2-mod` 文件夹、`一键安装.bat` 等）复制到您的 **游戏根目录**（即含有 `MW2CR.exe` 或 `overlord.exe` 的文件夹）。
 3. 双击运行 **`一键安装.bat`**。
 4. 启动游戏进入战役，即可听到全中文对白！
 
@@ -75,37 +89,53 @@
 
 如果您希望随时换回官方原生英文语音：
 * 双击游戏根目录下的 **`一键卸载.bat`**。
-* 脚本将瞬间安全移除本 Mod 注入的文件，**绝不损坏任何官方原始文件**，秒恢复原版英文。
+* 脚本将瞬间安全移除本 Mod 注入的文件，**绝不改动任何官方原始文件**，秒恢复原版英文。
 
 ---
 
-## ⚙️ 游戏运行与环境推荐
+## ⚙️ 游戏运行与环境说明
 
-* **启动方式**：强烈推荐使用 **`overlord.exe -singleplayer`** 启动游戏（Overlord 启动器自带内存钩子与反反作弊保护，可完美加载自定义 Mod 资源）。
-* **语言设置**：游戏启动后请确保主菜单或设置中语言为 **简体中文**（若为其他语言，Fastfile 补丁可能被引擎跳过）。
-* **VR 支持**：本 Mod 原生完美兼容 **Overlord VR Mod**，进入虚拟现实战场体验身临其境的战术指令。
+* **启动方式**：
+  - **普通原版模式**：通过常规方式或客户端启动器启动游戏即可；
+  - **VR 模式**：通过 `overlord.exe`（或其 VR 快捷方式）启动即可。
+* **语言设置**：游戏启动后请确保主菜单或设置中语言为 **简体中文**（若为繁体中文或英文，引擎将跳过简中补丁）。
+* **兼容性说明**：本补丁采用外挂文件系统覆盖，不修改核心主程序，与绝大多数学习版、修改器及图形增强滤镜互不冲突。
 
 ---
 
 ## ❓ 常见问题排查 (FAQ)
 
-### Q1: 进入关卡后没有声音（完全静音）？
-* **排查 1**：确认是通过 `overlord.exe` 启动游戏，而不是直接双击受到 Arxan 反篡改保护的 `MW2CR.exe`。
-* **排查 2**：确认游戏根目录下 `h2-mod/zone/` 中同时存在门槛文件 `h2_mod_patch_<关卡名>.ff` 和 `simplified_chinese/sch_h2_mod_patch_<关卡名>.ff`（缺一不可）。
-* **排查 3**：双击运行本 Mod 根目录下的 `校验工具.bat` 检查文件是否损坏。
+### Q1: 听到的是原版英文，没有变成中文？
+* 请检查游戏内的语言设置是否为 **简体中文**；
+* 检查补丁是否放对了位置：游戏根目录下必须存在 `h2-mod\zone\simplified_chinese\sch_h2_mod_patch_<关卡名>.ff` 与 `h2-mod\zone\h2_mod_patch_<关卡名>.ff`。
 
-### Q2: 听到的是原版英文，没有变成中文？
-* 确认客户端语言设置为了简体中文，若客户端为英文版，请在快捷方式或启动参数中加入相关语言选项。
+### Q2: 进入关卡后部分台词没有声音（完全静音）？
+* 确认解压完整，没有被某些管家类杀毒软件误删除或拦截 `.flac` 音频；
+* 检查操作系统音频输出采样率（推荐设为 48000Hz 24-bit / 16-bit）；
+* 若在某一关某一句出现必定静音，请前往 GitHub Issues 报告具体关卡与触发时机。
 
----
-
-## 📜 法律声明与致谢
-
-1. **版权归属**：《使命召唤：现代战争2》（Call of Duty: Modern Warfare 2）的一切音频、剧情、美术版权归 **动视暴雪（Activision Blizzard）** 及原开发团队 **Infinity Ward** 所有。
-2. **非商业声明**：本 Mod 为民间中文爱好者制作的免费、开源非商业补丁，**严禁任何个人或机构将本 Mod 用于任何形式的商业营利行为（包括但不限于付费下载、打包售卖等）**。
-3. **开源技术**：感谢 IndexTTS 团队、ZoneTool 逆向社区（RektInator, Laupetin 等）及 Overlord VR 开发者的杰出贡献！
+### Q3: 声音大小或混响听起来不够平衡？
+* 游戏内可以在“选项 - 声音”中适度调整“对话音量”与“主音量”比例；
+* 由于 AI 合成时各关卡环境混响各异，后续版本将持续通过微调混音曲线改善。
 
 ---
 
-*制作组：MW2CR 中文配音制作组*  
-*代码仓库：https://github.com/mccrena/cod6ChineseAudio.git*
+## 📜 版权声明与致谢 (Credits & Attribution)
+
+1. **游戏原作版权**：
+   - 《使命召唤：现代战争2 战役重制版》（Call of Duty: Modern Warfare 2 Campaign Remastered）的一切音频、剧本、角色形象与游戏资源版权均归 **动视暴雪（Activision Blizzard）** 及原开发商 **Infinity Ward** 所有。
+2. **VR Mod 版权与独立性声明**：
+   - **Overlord (MW2CR VR Mod)** 的全部代码、二进制及项目所有权归原作者 **[Aeka0](https://github.com/Aeka0)** 所有，项目主页：[https://github.com/Aeka0/Overlord](https://github.com/Aeka0/Overlord)（Bilibili: @Aeka0 超铀）。
+   - **独立性声明**：本配音 Mod 为完全独立的语言与音频外挂资源补丁，**本项目不包含、不修改、亦不二次分发 Overlord 的任何代码或可执行文件（如 `overlord.exe`、DLL 钩子等）**。如需使用 VR 模式游玩，请严格遵循其开源许可协议前往原作者仓库下载安装。
+3. **技术与逆向社区致谢**：
+   - 感谢 **H2-Mod** 开源社区提供底层文件重定向机制；
+   - 感谢 **ZoneTool** 开发者（RektInator、Laupetin 等）开源的 Fastfile 资产打包工具链；
+   - 感谢 **IndexTTS** 开源神经声学语音合成技术社区。
+4. **非商业免责声明**：
+   - 本 Mod 为个人业余制作的免费、非商业化技术探索与玩家交流作品；
+   - **严禁任何个人或机构将本 Mod 用于任何形式的商业营利行为（包括但不限于付费下载、打包倒卖、赞助解锁等）**。
+
+---
+
+*项目维护：mccrena*  
+*Mod 发布仓库：https://github.com/mccrena/cod6ChineseMod*
