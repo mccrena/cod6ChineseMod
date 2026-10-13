@@ -1,0 +1,12 @@
+# System & Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*.tmp
+*.log
+
+# Release archives
+*.zip
+*.rar
+*.7z

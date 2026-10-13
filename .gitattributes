@@ -1,0 +1,5 @@
+# Git attributes for audio and game assets
+*.flac binary
+*.ff binary
+*.bat text eol=crlf
+*.md text eol=lf
