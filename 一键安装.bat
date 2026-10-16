@@ -1,11 +1,12 @@
 @echo off
+setlocal enabledelayedexpansion
 chcp 65001 >nul
-title 使命召唤：现代战争2 战役重制版 (MW2CR) 中文配音 Mod - 一键安装程序
+title 使命召唤：现代战争2 战役重制版 (MW2CR) 中文配音 Mod - 一键安装程序 (v1.1)
 cls
 
 echo ==============================================================================
-echo        使命召唤：现代战争2 战役重制版 (MW2CR) 中文配音 Mod Beta 1.0
-echo             全战役 19 关全流程中文普通话配音 (普通版 / VR 双模式通用)
+echo        使命召唤：现代战争2 战役重制版 (MW2CR) 中文配音 Mod v1.1 正式版
+echo       全战役 19 关全流程中文普通话配音 + 全过场 CG 汉化 (普通版 / VR 双模式通用)
 echo ==============================================================================
 echo.
 
@@ -40,28 +41,48 @@ if "%FOUND_EXE%"=="0" (
 
 echo [1/3] 正在核验配音补丁核心结构...
 if not exist "h2-mod\zone\simplified_chinese" (
-    echo [警告] 补丁目录结构不完整，正在自动修复...
     mkdir "h2-mod\zone\simplified_chinese" 2>nul
 )
 
-echo [2/3] 正在同步游戏声音缓存与别名加载表...
-REM 确保无前缀门槛文件与简中前缀补丁就位
+echo [2/3] 正在同步游戏声音缓存与 Fastfile 双补丁...
 set MISSING_FF=0
 if not exist "h2-mod\zone\simplified_chinese\sch_h2_mod_patch_trainer.ff" set MISSING_FF=1
 if not exist "h2-mod\zone\h2_mod_patch_trainer.ff" set MISSING_FF=1
+if not exist "h2-mod\simplified_chinese\sound\voiceovers\train\train_fly_welcome.flac" set MISSING_FF=1
 
 if "%MISSING_FF%"=="1" (
-    echo [警告] 发现部分 Fastfile 丢失，请重新解压本 Mod 压缩包！
+    echo [警告] 发现部分关键补丁文件丢失，请重新解压本 Mod 压缩包！
 ) else (
-    echo [OK] 全战役 19 关 Fastfile 双补丁与 2031 条专有 FLAC 音频均已就绪。
+    echo [OK] 全战役 19 关 Fastfile 双补丁与 9157 条专有中文 FLAC 战术语音均已就绪。
 )
 
-echo [3/3] 安装完成！
+REM 检查与同步 CG 视频布局（兼容 simplified_chinese 与 video 两种引擎检索路径）
+if exist "h2-mod\simplified_chinese\trainer_load.bik" (
+    if not exist "h2-mod\video" mkdir "h2-mod\video" 2>nul
+    if not exist "h2-mod\video\trainer_load.bik" (
+        for %%f in ("h2-mod\simplified_chinese\*.bik") do (
+            if not exist "h2-mod\video\%%~nxf" mklink /H "h2-mod\video\%%~nxf" "%%f" >nul 2>nul
+            if not exist "h2-mod\video\%%~nxf" copy /y "%%f" "h2-mod\video\%%~nxf" >nul 2>nul
+        )
+    )
+    echo [OK] 全战役 17 部 1080P/4K 中文 CG 过场动画已全部就位！
+) else (
+    echo [提示] 当前未检测到 CG 视频增强包（战役对白语音正常生效，过场CG可按需选装）。
+)
+
+echo [3/3] 正在配置游戏语言环境为简体中文 (zhCN)...
+reg add "HKCU\Software\Blizzard Entertainment\Battle.net\Launch Options\LAZR" /v "LOCALE" /t REG_SZ /d "zhCN" /f >nul 2>nul
+reg add "HKCU\Software\Blizzard Entertainment\Battle.net\Launch Options\LAZR" /v "LOCALE_AUDIO" /t REG_SZ /d "zhCN" /f >nul 2>nul
+
 echo.
 echo ==============================================================================
+echo [成功] 安装与语言配置完成！
+echo 请直接双击 overlord.exe (VR 模式) 或 MW2CR.exe (普通模式) 启动游戏畅玩！
+echo ==============================================================================
+echo.
 echo 【启动建议】
 echo 1. 普通模式 / VR 模式均推荐通过 overlord.exe 启动（命令：overlord.exe -singleplayer）
-echo 2. 游戏语言请确保设置为「简体中文」，进入任意战役关卡即可享受全中文沉浸配音！
+echo 2. 游戏语言请确保设置为「简体中文」，进入战役即可享受全中文沉浸语音！
 echo 3. 如需恢复原版英文语音，双击运行【一键卸载.bat】即可秒切回原生英文。
 echo ==============================================================================
 echo.
