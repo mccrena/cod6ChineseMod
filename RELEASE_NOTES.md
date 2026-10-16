@@ -32,14 +32,13 @@
 * **GitHub 项目主页**：[GitHub - mccrena/cod6ChineseMod](https://github.com/mccrena/cod6ChineseMod)
 * **Release 下载专区**：[Releases · mccrena/cod6ChineseMod](https://github.com/mccrena/cod6ChineseMod/releases)
 
-#### 1. 必选下载：核心语音包 (`MW2CR_Chinese_Audio_Mod_v1.1.zip`，约 380MB)
+#### 1. 必选下载：核心语音包 (`MW2CR_Chinese_Audio_Mod_v1.1.zip`，约 705MB)
 包含全战役 19 关 Fastfile 双补丁、全部 9157 条游戏内战术中文语音与一键安装程序。
 - **安装方法**：下载后解压至游戏根目录（包含 `overlord.exe` 或 `MW2CR.exe` 的文件夹），双击运行 **【一键安装.bat】** 即可。
 
-#### 2. 可选下载：全流程 CG 视频增强包 (两卷，每卷约 1.1GB)
-包含 17 部完整中文化的战役过场动画：
-- `MW2CR_Chinese_CG_Pack_v1.1_Part1.zip`（序幕至前半战役 9 部视频）
-- `MW2CR_Chinese_CG_Pack_v1.1_Part2.zip`（后半战役至终章决战 8 部视频）
+#### 2. 可选下载：全流程 CG 视频增强包 (17 部 1080P/4K 中文动画)
+- **单包一键版（推荐）**：`MW2CR_Chinese_CG_Pack_v1.1.7z`（单文件 2.08GB，包含全 17 部视频）
+- **免工具分卷版**：`MW2CR_Chinese_CG_Pack_v1.1_Part1.zip`（1.22GB，前 9 关）+ `MW2CR_Chinese_CG_Pack_v1.1_Part2.zip`（0.97GB，后 8 关）
 - **安装方法**：解压并将里面的 `h2-mod` 文件夹直接覆盖到游戏根目录下的 `h2-mod` 文件夹中。
 
 ---
